@@ -57,23 +57,52 @@ header {
 }
 
 .produtos-container-grid div {
-    width: 320px;
-    height: 200px;
+    width: 384px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     flex: 1;
-    
+
 }
 
 .produto-imagem {
     background-color: #F3F7FF;
+    display: grid;
+    height: 200px;
+    place-content: center;
  
     img {
-        width: 150px;
-        height: 130px;
+        width: 170px;
+        height: 135px;  
+        display: block;
+        margin: auto;
         object-fit: contain;
     }
 }
 .produto-descricao {
+    color: #121214;
 
+    h2 {
+        font-size: 1.05rem;
+        padding-block: 15px;
+    }
+
+    h3 {
+        color: #7CA2F4;
+        font-size: 0.95rem;
+        font-weight: 400;
+    }
+
+    p {
+        font-weight: bold;
+        padding-top: 30px;
+        font-size: 1.15rem;
+        font-weight: 600;
+    }
+}
+
+@media (width: 768px) {
+    .produtos-container-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
