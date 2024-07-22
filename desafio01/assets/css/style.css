@@ -1,10 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --header-bg: #17171A;
+    --section-bg: #121214;
+    --header-pesquisar-bg: #202024;
+
+    
+}
+
 body {
     min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #FFF;
+}
+
+h1,h2,h3,
+h4,h5,h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+header {
+    padding: 55px 0px;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    gap: 25px;
+    background-color: var(--header-bg);
+}
+
+.header-body {
+    width: 1219px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    text-align: center;
+}
+
+.header-pesquisar {
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: 5px;
+    background-color: var(--header-pesquisar-bg);
+    border: 1px solid #252529;
+    color: #FFF;
     
+}
+
+section {
+    background-color: var(--section-bg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+.section-body {
+    margin: auto;
+    padding: 20px 0px;
+    width: 1216px;
+    min-height: 100vh;
+
+}
+
+.section-content {
+    background-color: var(--header-bg);
+    width: 100%;
+    padding: 40px;
+    margin: 40px 0px;
+
+
+    h2 {
+        padding: 15px 0px;
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #AFABB6;
+    }
+}
+
+.sections-content-subtitles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+        color: #E07B67;
+    }
+}
+
+.sections-content-subtitles div {
+    position: relative;
+}
+
+
+
+
+#checkBox {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+/*LOGICA PARA ALTERNAR OS SVGS, E USEI OPACITY 0 PARA DEIXAR A CHECKBOX INVISÍVEL*/
+
+.sections-content-subtitles div:has(:checked) .section-svg-cheio,
+.sections-content-subtitles div .section-svg-vazio {
+    display: none;
+}
+
+.sections-content-subtitles div:has(:checked) .section-svg-vazio,
+.sections-content-subtitles div .section-svg-cheio {
+    display: block;
 }
