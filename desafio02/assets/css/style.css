@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Archivo", sans-serif;
+    
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 0.65rem;
+    padding: 5px;
+}
+.section-mj-bg {
+    height: 400px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.section-produtos {
+    width: 100%;
+    height: 100vh;
+}
+
+.produtos-container {
+  width: 1216px;
+  margin: auto;
+}
+.produtos-container-text {
+    text-align: center;
+    margin-block: 34px;
+
+    h2 {
+        padding: 22px;
+    }
+
+    p {
+        width: 483px;
+        height: 68px;
+        color: #121214;
+        font-size: 1.15rem;
+        margin: auto;
+    }
+}
+
+.produtos-container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.produtos-container-grid div {
+    width: 320px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+}
+
+.produto-imagem {
+    background-color: #F3F7FF;
+ 
+    img {
+        width: 150px;
+        height: 130px;
+        object-fit: contain;
+    }
+}
+.produto-descricao {
+
+}
